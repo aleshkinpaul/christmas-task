@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="container header-container">
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li class="nav-list-item nav-home-link"
+            routerLinkActive="router-home-link-active"
+            [routerLinkActiveOptions]="{exact: true}"
+            [routerLink]="['/']"></li>
+        <li class="nav-list-item nav-toys-link"
+            [routerLink]="['/toys']"
+            routerLinkActive="router-link-active">Игрушки</li>
+        <li class="nav-list-item nav-tree-link"
+            [routerLink]="['/tree']"
+            routerLinkActive="router-link-active">Елка</li>
+      </ul>
+    </nav>
+    <div class="header-controller-container">
+      <div class="settings-container"></div>
+    </div>
+  </div>
+</header>

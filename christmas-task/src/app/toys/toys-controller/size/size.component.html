@@ -1,0 +1,6 @@
+<mat-checkbox
+  class="checkbox-label size-filter-list-item"
+  (click)="checkSize()"
+  [checked]="sizeInfo.isChosen"
+  #size
+  >{{ getNameWithFirstCapitalLetter() }}</mat-checkbox>

@@ -1,0 +1,38 @@
+<div class="toys-desc-container">
+  <div class="toys-list-controller">
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-input"
+        [placeholder]="searchPlaceholder"
+        [(ngModel)]="searchText"
+        (input)="showEmptyToysList()">
+      <span class="search-icon"></span>
+      <a class="delete-icon" (click)="clearSearch()" *ngIf="searchText.length"></a>
+    </div>
+    <div class="selected-toys-container">
+      <span class="selected-toys-count">{{ selectedToysCount }}</span>
+    </div>
+  </div>
+  <ul class="toys-list" [@.disabled]="disableAnimation">
+    <app-toy-card
+      [toyData]="toy"
+      [triggerFilter]="triggerFilter"
+      [searchText]="searchText"
+      (onSelectToy)="updateSelectedToysCount()"
+      (onNotificate)="showNotification()"
+      *ngFor="let toy of toysData"></app-toy-card>
+  </ul>
+  <div
+    class="selected-item-limit-notification"
+    *ngIf="isNotificate"
+    @notification-message>
+    <p class="notification-text">Извините, все слоты заполнены</p>
+  </div>
+  <div
+    class="empty-list-notification"
+    *ngIf="isEmpty"
+    @notification-message>
+    <p class="empty-list-text">Извините, совпадений не обнаружено</p>
+  </div>
+</div>

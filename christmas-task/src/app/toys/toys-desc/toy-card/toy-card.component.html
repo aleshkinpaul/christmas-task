@@ -1,0 +1,23 @@
+
+<li class="toys-list-item"
+  *ngIf="toyData.visible"
+  (click)="selectToy()"
+  @toy-card
+  #toyCard>
+  <div
+    class="toy-card" 
+    [class.toy-card-active]="toyData.isSelected">
+    <h3 class="toy-title">{{ toyData.name }}</h3>
+    <div class="toy-cover-container">
+      <img [src]="toyImgUrl" [alt]="toyData.name" class="toy-cover">
+    </div>
+    <ul class="toy-parameters-list">
+      <li class="toy-parameter">Количество: {{ toyData.count }}</li>
+      <li class="toy-parameter">Год покупки: {{ toyData.year }} год</li>
+      <li class="toy-parameter">Форма игрушки: {{ toyData.shape }}</li>
+      <li class="toy-parameter">Цвет игрушки: {{ toyData.color }}</li>
+      <li class="toy-parameter">Размер игрушки: {{ toyData.size }}</li>
+      <li class="toy-parameter">Любимая: {{ isFavouriteStr }}</li>
+    </ul>
+  </div>
+</li>

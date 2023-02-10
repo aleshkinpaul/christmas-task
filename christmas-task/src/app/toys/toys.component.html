@@ -1,0 +1,18 @@
+<div class="toys-page">
+  <div class="container toys-container" *ngIf="!isLoading; else loading">
+    <div class="controller-container">
+      <app-toys-controller
+        [options]="filterOptions"
+        (onChanged)="filterToys()"
+        (onSorted)="applySortOptions()">
+      </app-toys-controller>
+    </div>
+    <div class="toys-list-container">
+      <app-toys-desc [toysData]="toysData" [triggerFilter]="triggerFilter"></app-toys-desc>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <img src="../../assets/svg/spinner.svg" alt="loading spinner" class="loading-spinner">
+</ng-template>

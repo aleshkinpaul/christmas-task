@@ -1,0 +1,16 @@
+<mat-slider 
+  class="slider"
+  thumbLabel
+  [displayWith]="getSliderValue"
+  tickInterval="1000"
+  step="1"
+  [min]="sliderInfo.minValue"
+  [max]="sliderInfo.maxValue"
+  [value]="sliderInfo.value"
+  aria-label="units"
+  (input)="inputValue()"
+  #sliderElem></mat-slider>
+  <div class="slider-values-container">
+  <div class="min-toys-count-value">{{ sliderInfo.minValue }}</div>
+  <div class="max-toys-count-value">{{ sliderInfo.maxValue }}</div>
+</div>

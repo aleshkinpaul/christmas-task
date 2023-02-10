@@ -1,0 +1,69 @@
+@import '../../../../root';
+
+.toys-list-item {
+  list-style-type: none;
+  overflow: hidden;
+  transform: all 1000 ease;
+
+  .toy-card {
+    padding: 18px 16px;
+    margin: 30px 20px 0 10px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+    box-sizing: border-box;
+    color: $text-color;
+    background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.5) 0%, rgba(179, 246, 255, 0.5) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.toy-card-active {
+      padding: 13px 11px;
+      border: 5px solid $active-color;
+    }
+  
+    &:hover {
+      padding: 13px 11px;
+      opacity: 0.8;
+      border: 5px solid $active-color;
+    }
+  
+    .toy-title {
+      margin-bottom: 0;
+      font-family: "Neucha";
+      font-size: 18px;
+      line-height: 20px;
+    }
+  
+    .toy-cover-container {
+      width: 106px;
+      height: 106px;
+      align-self: center;
+  
+      .toy-cover {
+        width: auto;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+  
+    .toy-parameters-list {
+      padding: 0;
+      margin: 0;
+      
+      .toy-parameter {
+        margin-bottom: 12px;
+        font-family: "Steppe";
+        font-size: 10px;
+        line-height: 12px;
+        list-style: none;
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<div class="shape-filter-list-item"
+     (click)="toggleShape()"
+     [class.shape-filter-list-item-chosen]="shape.isChosen">
+  <div class="shape-filter-list-item-cover" [ngStyle]="{'-webkit-mask-image': 'url(' + shape.url + ')'}"></div>
+  <div class="shape-filter-list-item-name">{{ shape.name }}</div>
+</div>

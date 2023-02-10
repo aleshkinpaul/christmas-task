@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Steppe";
+  src: url(./assets/fonts/Steppe.ttf);
+}
+@font-face {
+  font-family: "Neucha";
+  src: url(./assets/fonts/Neucha.ttf);
+}
+
+$bg-color: #192F2D;
+$text-color: #FFFFFF;
+$home-bg-url: url(../../assets/bg.jpg);
+$rss-logo-url: url(../../assets/svg/rss.svg);
+$text-hover-color: #24C5DB;
+$active-color: #77E27E;
+$selected-color: #f1c232;
+
+$footer-height: 100px;
+$header-height: 60px;

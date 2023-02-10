@@ -1,0 +1,80 @@
+<div class="controller-container">
+  <div class="sort-container">
+    <h3 class="controller-subtitle">Сортировать</h3>
+    <div class="sort-list">
+      <app-sort-select
+        *ngFor="let sortType of options.sortTypes"
+        [sortType]="sortType"
+        (onSorted)="applySort()">
+      </app-sort-select>
+    </div>
+  </div>
+  <div class="filter-container">
+    <h3 class="controller-subtitle">Категории</h3>
+    <section class="shape-filter-section filter-section">
+      <h4 class="section-title">Форма</h4>
+      <ul class="shape-filter-list">
+        <li *ngFor="let shape of options.shapes">
+          <app-shape
+            [shape]="shape"
+            class="shape-filter-list-item"
+            (onChanged)="applyFilter()"></app-shape>
+        </li>        
+      </ul>
+    </section>
+    <section class="count-filter-section filter-section">
+      <h4 class="section-title">Количество экземпляров</h4>
+      <app-value-slider
+        [sliderInfo]="options.count"
+        (onChanged)="applyFilter()">
+      </app-value-slider>
+    </section>
+    <section class="year-filter-section filter-section">
+      <h4 class="section-title">Год приобретения</h4>
+      <app-value-slider
+        [sliderInfo]="options.year"
+        (onChanged)="applyFilter()">
+      </app-value-slider>
+    </section>
+    <section class="color-filter-section filter-section">
+      <h4 class="section-title">Цвет</h4>
+      <ul class="color-filter-list">
+        <li class="color-filter-list-item"
+            *ngFor="let color of options.colors">
+            <app-color
+              [colorInfo]="color"
+              (onChanged)="applyFilter()"></app-color>
+        </li>
+      </ul>
+    </section>
+    <section class="size-filter-section filter-section">
+      <h4 class="section-title">Размер</h4>
+      <ul class="size-filter-list">
+        <li
+          class="size-filter-list-item"
+          *ngFor="let size of options.sizes">
+          <app-size
+            [sizeInfo]="size"
+            (onChanged)="applyFilter()"></app-size>
+        </li>
+      </ul>
+    </section>
+    <section class="favorite-section filter-section">
+      <app-favorite
+        [favorite]="options.favorite"
+        (onChanged)="applyFilter()"></app-favorite>
+    </section>
+    <div class="buttons-controller">
+      <button 
+        mat-raised-button
+        class="button-controller reset-button"
+        color="accent"
+        (click)="setDefault()">Сбросить фильтры</button>
+      <button 
+        mat-raised-button
+        class="button-controller reset-button"
+        color="accent"
+        (click)="clearLocalStorage()">Сбросить настройки</button>
+    </div>
+  </div>
+</div>

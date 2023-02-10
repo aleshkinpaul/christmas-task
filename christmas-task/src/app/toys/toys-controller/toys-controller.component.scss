@@ -1,0 +1,86 @@
+@import '../../../root';
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.sort-container {
+  margin: 10px 0 0;
+  display: flex;
+  column-gap: 25px;
+  
+  .controller-subtitle {
+    margin-top: 5px;
+  }
+}
+  
+.controller-subtitle {
+  margin-bottom: 15px;
+  font-family: "Neucha";
+  font-size: 20px;
+  line-height: 22px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  list-style-type: none;
+  user-select: none;
+}
+
+.filter-container {
+
+  .filter-section {
+    margin-bottom: 20px;
+
+    .section-title {
+      margin-bottom: 10px;
+      font-family: "Steppe";
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .shape-filter-section {
+    margin-bottom: 15px;
+
+    .shape-filter-list {
+      display: flex;
+      flex-direction: row;
+      column-gap: 25px;
+    }
+  }
+
+  .color-filter-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+
+    .color-filter-list-item {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .size-filter-list {
+    display: flex;
+    column-gap: 24px;
+  }
+
+  .size-filter-list-item,
+  .favorite-checkbox {
+    font-family: "Steppe";
+    font-size: 16px;
+  }
+
+  .checkbox-label .mat-checkbox-label {
+    margin-top: 5px;
+  }
+
+  .buttons-controller {
+    display: flex;
+    column-gap: 15px;
+  }
+}

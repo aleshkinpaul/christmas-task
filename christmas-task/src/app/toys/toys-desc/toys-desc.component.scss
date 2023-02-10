@@ -1,0 +1,141 @@
+@import '../../../root';
+
+
+.toys-desc-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+
+  .toys-list-controller {
+    width: 100%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    column-gap: 50px;
+    box-sizing: border-box;
+
+    .search-container {
+      position: relative;
+      height: 100%;
+      width: 60%;
+
+      .search-input {
+        padding: 0 90px 0 20px;
+        height: 100%;
+        width: 100%;
+        min-width: 500px;
+        font-family: "Neucha";
+        font-size: 20px;
+        line-height: 54px;
+        text-align: left;
+        color: $text-color;
+        background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.5) 0%, rgba(179, 246, 255, 0.5) 100%);
+        backdrop-filter: blur(15px);
+        border-radius: 30px;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+
+      .search-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%,);
+        background-color: $bg-color;
+        -webkit-mask-image: url(../../../assets/svg/search.svg);
+        -webkit-mask-size: 20px 20px;
+        -webkit-mask-repeat: no-repeat;
+      }
+
+      .delete-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        right: 60px;
+        transform: translateY(-50%,);
+        background-color: $bg-color;
+        -webkit-mask-image: url(../../../assets/svg/delete.svg);
+        -webkit-mask-size: 20px 20px;
+        -webkit-mask-repeat: no-repeat;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .selected-toys-container {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background-color: $selected-color;
+      -webkit-mask-image: url(../../../assets/svg/star.svg);
+      -webkit-mask-size: 40px 40px;
+      -webkit-mask-repeat: no-repeat;
+  
+      .selected-toys-count {
+        font-family: "Neucha";
+        position: absolute;
+        top: 55%;
+        left: 48%;
+        color: $bg-color;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+    }
+  }
+
+  .toys-list {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .selected-item-limit-notification {
+    padding: 15px 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(118.88% 606.86% at 0% 0%, rgba(36, 197, 219, 0.15) 0%, rgba(36, 197, 219, 0) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+
+    .notification-text {
+      margin: 0;
+      font-family: "Steppe";
+      font-size: 24px;
+      line-height: 54px;
+      text-align: center;
+      color: $text-color;
+    }
+  }
+
+  .empty-list-notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .empty-list-text {
+      margin-top: 40px;
+      text-align: center;
+      font-family: "Steppe";
+      font-size: 24px;
+      line-height: 54px;
+      text-align: center;
+      color: $text-color;
+    }
+  }
+}

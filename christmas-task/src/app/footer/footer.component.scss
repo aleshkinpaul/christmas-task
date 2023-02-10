@@ -1,0 +1,48 @@
+@import '../../root';
+
+.footer {
+  width: 100%;
+  height: $footer-height;
+  background-color: $bg-color;
+
+  .footer-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  
+    .author {
+      align-self: center;
+    
+      .author-link {
+        font-family: "Steppe";
+        font-size: 12px;
+        line-height: 14px;
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.5s ease;
+      }
+      
+      .author-link:hover {
+        color: $text-hover-color;
+        transition: color 0.5s ease;
+      }
+    }
+    
+    .footer-logo {
+      width: 234px;
+      height: 87px;
+      align-self: center;
+      background-color: $text-color;
+      -webkit-mask-image: $rss-logo-url;
+      -webkit-mask-size: 234px 87px;
+      -webkit-mask-repeat: no-repeat;
+      transition: background-color 0.5s ease;
+    
+      &:hover {
+        background-color: $text-hover-color;
+        transition: background-color 0.5s ease;
+      }
+    }
+  }
+}

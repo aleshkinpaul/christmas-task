@@ -1,0 +1,73 @@
+@import '../../root';
+
+.header {
+  height: $header-height;
+  color: $text-color;
+  background-color: $bg-color;
+
+  .header-container {
+    padding: calc($header-height * 0.1) 0;
+    height: calc($header-height * 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .nav-list {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      column-gap: 40px;
+
+      .nav-list-item {
+        font-family: "Neucha";
+        font-size: 36px;
+        align-self: center;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        list-style-type: none;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.5s ease;
+        transition: color 0.5s ease;
+
+        &:hover {
+          color: $text-hover-color;
+          transition: background-color 0.5s ease;
+          transition: color 0.5s ease;
+        }
+
+        &:first-child {
+          width: 37px;
+          height: 48px;
+          background-color: $text-color;
+          -webkit-mask-image: url(../../assets/svg/tree.svg);
+          -webkit-mask-size: 37px 48px;
+          -webkit-mask-repeat: no-repeat;
+
+          &:hover {
+            background-color: $text-hover-color;
+          }
+        }
+      }
+
+      .nav-home-link {
+        height: 100%;
+
+        .nav-home-link-img {
+          height: 100%;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.router-link-active {
+  color: $text-hover-color;
+}
+
+.router-home-link-active {
+  background-color: $text-hover-color !important;
+}

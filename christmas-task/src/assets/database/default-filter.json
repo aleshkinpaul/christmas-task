@@ -1,0 +1,95 @@
+{
+  "sortTypes": [
+    {
+      "title": "По году",
+      "name": "year",
+      "id": 0
+    },
+    {
+      "title": "По названию",
+      "name": "name",
+      "id": 0
+    }
+  ],
+  "shapes": [
+    {
+      "name": "Колокол",
+      "url": "../../../../assets/svg/bell.svg",
+      "isChosen": false
+    },
+    {
+      "name": "Шар",
+      "url": "../../../../assets/svg/ball.svg",
+      "isChosen": false
+    },
+    {
+      "name": "Шишка",
+      "url": "../../../../assets/svg/cone.svg",
+      "isChosen": false
+    },
+    {
+      "name": "Снежинка",
+      "url": "../../../../assets/svg/snow.svg",
+      "isChosen": false
+    },
+    {
+      "name": "Фигурка",
+      "url": "../../../../assets/svg/bird_toy.svg",
+      "isChosen": false
+    }
+  ],
+  "count": {
+    "minValue": 0,
+    "maxValue": 20,
+    "value": 0,
+    "name": "count"
+  },
+  "year": {
+    "minValue": 1900,
+    "maxValue": 2021,
+    "value": 1900,
+    "name": "year"
+  },
+  "colors": [
+    {
+      "name": "белый",
+      "colorHex": "#FFFFFF",
+      "isChosen": false
+    },
+    {
+      "name": "желтый",
+      "colorHex": "#FDD700",
+      "isChosen": false
+    },
+    {
+      "name": "красный",
+      "colorHex": "#FD0000",
+      "isChosen": false
+    },
+    {
+      "name": "синий",
+      "colorHex": "#2299EB",
+      "isChosen": false
+    },
+    {
+      "name": "зелёный",
+      "colorHex": "#08AA05",
+      "isChosen": false
+    }
+  ],
+  "sizes": [
+    {
+      "name": "большой",
+      "isChosen": false
+    },
+    {
+      "name": "средний",
+      "isChosen": false
+    },
+    {
+      "name": "малый",
+      "isChosen": false
+    }
+  ],
+  "favorite": false
+}
